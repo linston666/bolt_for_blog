@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1 {
+    @apply text-gray-900 font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-gray-800 font-semibold;
+  }
+
+  h3 {
+    @apply text-gray-700 font-medium;
+  }
+
+  p {
+    @apply text-gray-600;
+  }
+}
+
+@layer components {
+  .apple-blur {
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+  
+  .apple-button {
+    @apply px-6 py-2.5 rounded-full font-medium transition-all duration-200
+           bg-gray-900 text-white hover:bg-gray-800
+           active:scale-[0.98];
+  }
+  
+  .apple-card {
+    @apply bg-white/90 rounded-2xl shadow-sm hover:shadow-md
+           transition-all duration-200 overflow-hidden
+           backdrop-blur-sm;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 text-center mb-12;
+  }
+
+  .section-subtitle {
+    @apply text-xl font-medium text-gray-700 text-center mb-6;
+  }
+
+  .body-text {
+    @apply text-base text-gray-600 leading-relaxed;
+  }
+
+  .caption-text {
+    @apply text-sm text-gray-500;
+  }
+}
